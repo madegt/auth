@@ -4,5 +4,12 @@
 
 # TODO:
 # 1. encrypt a secret and puts encrypted string
-# 2. prepare encrypted string for testing
+
+secret= "puppies"
+result = BCrypt::Password.create(secret)
+puts result
+
+# 2. prepare encrypted string for testing, test the encrypting value to go back. I want to now if it is the same thing, not decrypting
+Puts BCrypt::Password.new(result) == secret
+
 # 3. test secret against prepared encrypted string
